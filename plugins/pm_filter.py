@@ -446,7 +446,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🌴 My Group', url='https://t.me/joinmoviestationgroup')
             ],[
             InlineKeyboardButton('🧑‍💻 Developer', url='https://t.me/devil666official'),
-            InlineKeyboardButton('♥️ Source', url='https://t.me/devil666official)
+            InlineKeyboardButton('♥️ Source', url='https://t.me/devil666official')
             ],[
             InlineKeyboardButton('🏠 Home', callback_data='start')
         ]]
