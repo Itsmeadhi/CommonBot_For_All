@@ -446,7 +446,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🌴 My Group', url='https://t.me/joinmoviestationgroup')
             ],[
             InlineKeyboardButton('🧑‍💻 Developer', url='https://t.me/devil666official'),
-            InlineKeyboardButton('♥️ Source', url='https://t.me/devil666official')
+            InlineKeyboardButton('♥️ Source', callback_data='source')
             ],[
             InlineKeyboardButton('🏠 Home', callback_data='start')
         ]]
@@ -647,7 +647,7 @@ async def auto_filter(client, msg, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"🎀[{get_size(file.file_size)}]🎀{file.file_name}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"[{get_size(file.file_size)}]{file.file_name}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files
@@ -660,7 +660,7 @@ async def auto_filter(client, msg, spoll=False):
                     callback_data=f'{pre}#{file.file_id}',
                 ),
                 InlineKeyboardButton(
-                    text=f"🎀[{get_size(file.file_size)}]🎀",
+                    text=f"[{get_size(file.file_size)}]",
                     callback_data=f'{pre}_#{file.file_id}',
                 ),
             ]
@@ -714,7 +714,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"🎀<STRONG>{search}</STRONG>🎀\n🤖 𝗨𝗣𝗟𝗢𝗔𝗗𝗘𝗗 𝗕𝗬 ♪♪ \n✨@TechnoMoviesCollection\n⚠️𝐍𝐨𝐭𝐞:♪→𝗜𝗳 𝗬𝗼𝘂 𝗗𝗼𝗻'𝘁 𝗞𝗻𝗼𝘄 𝗛𝗼𝘄 𝗧𝗼 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱 𝗜𝘁 𝗧𝗵𝗲𝗻 𝗧𝘆𝗽𝗲 #How 𝗜𝗻 𝗧𝗵𝗲 𝗚𝗿𝗼𝘂𝗽\n\n➥ 𝗝𝗼𝗶𝗻 ➼ @TmMainChannel"
+        cap = f"🤖 Here Is The Result For Your Query {search}"
     if imdb and imdb.get('poster'):
         try:
             await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
