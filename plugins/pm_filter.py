@@ -64,7 +64,7 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"🎀[{get_size(file.file_size)}]🎀{file.file_name}", callback_data=f'files#{file.file_id}'
+                    text=f"[{get_size(file.file_size)}]{file.file_name}", callback_data=f'files#{file.file_id}'
                 ),
             ]
             for file in files
@@ -76,7 +76,7 @@ async def next_page(bot, query):
                     text=f"{file.file_name}", callback_data=f'files#{file.file_id}'
                 ),
                 InlineKeyboardButton(
-                    text=f"🎀[{get_size(file.file_size)}]🎀",
+                    text=f"[{get_size(file.file_size)}]",
                     callback_data=f'files_#{file.file_id}',
                 ),
             ]
@@ -404,10 +404,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer()
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('𝐉𝐨𝐢𝐧 𝐎𝐮𝐫 𝐌𝐚𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥', url='https://t.me/Tmmainchannel')
+            InlineKeyboardButton('JOIN MAIN CHANNEL', url='https://t.me/MS_LINKS5')
             ],[
-            InlineKeyboardButton('🧊 𝐌𝐨𝐯𝐢𝐞𝐬', url='https://t.me/technomoviescollection'),
-            InlineKeyboardButton('📢 𝐂𝐡𝐚𝐭𝐭𝐢𝐧𝐠', url='https://t.me/Technomindzchat')
+            InlineKeyboardButton('🧊 𝐌𝐨𝐯𝐢𝐞𝐬', url='https://t.me/ms_ott_updates'),
+            InlineKeyboardButton('📢 𝐂𝐡𝐚𝐭𝐭𝐢𝐧𝐠', url='https://t.me/joinmoviestationGroup')
             ],[
             InlineKeyboardButton('🔍 Search', switch_inline_query_current_chat='')
             ],[
@@ -445,7 +445,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🆘 Get Help', url='https://t.me/ms_links5'),
             InlineKeyboardButton('🌴 My Group', url='https://t.me/joinmoviestationgroup')
             ],[
-            InlineKeyboardButton('🧑‍💻 Developer', url='https://t.me/joinmoviestationgroup'),
+            InlineKeyboardButton('🧑‍💻 Developer', url='https://t.me/devil666official),
             InlineKeyboardButton('♥️ Source', url='https://t.me/devil666official)
             ],[
             InlineKeyboardButton('🏠 Home', callback_data='start')
